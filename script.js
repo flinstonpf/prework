@@ -4,7 +4,8 @@ const cluePauseTime = 333; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
 
 //Global Variables
-for(var pattern=[],i=0;i<9;i++){pattern[i]=Math.floor(Math.random()*5)}
+var mistakes = 0;
+var pattern = [];
 var progress = 0; 
 var gamePlaying = false;
 var tonePlaying = false;
@@ -14,7 +15,8 @@ var clueHoldTime = 100;
 
 
 function startGame(){
-    //initialize game variables
+    mistakes = 0
+    for(var i=0;i<9;i++){pattern[i]=Math.floor((Math.random()*5)+1)}
     progress = 0;
     gamePlaying = true;
     document.getElementById("startBtn").classList.add("hidden");
@@ -106,9 +108,18 @@ if(pattern[guessCounter] == btn){
       guessCounter++;
     }
   }else{
+    if(mistakes < 3)
+      {
+        mistakes++;
+        alert("You have made " + mistakes + "mistakes");
+      }
+    else
+      {
+        loseGame();
+      }
     //Guess was incorrect
     //GAME OVER: LOSE!
-    loseGame();
+    
   }
 }
 
