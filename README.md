@@ -55,16 +55,19 @@ Overall, it is a problem that I run into alot and it was a simple issue of synta
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
 My question about web development is how to write effective and maintainable code. Even in a simple program like this one it can easily become convoluted if we keep adding more classes to our program.
 I also look forward to backend development part of web development. I know that databases are a critical component and I have worked with those before, but I have yet to work with any Backend APIs or anything complicated to which I am looking forward to.
+My interests also lie within the realm of front-end development. I find making sites that are visually appealing is a critical part of any working website. Personally, I have a very poor grasp over this aspect of web development and hope to improve that through my participation in the SITE program.
 
 
-4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
-[YOUR ANSWER HERE]
+4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words)
+If I had a few more hours on this project I would definitely improve the UI of the application. Currently, it is rather barebones and I stuck with what the tutorial provided and made mainly simple changes to the UI. For a simple application like this one the UI and visual appeal are the parts that can improved the most to appeal to a greater audience.
+Of course other improvements can be made, like allowing the user to choose a "difficulty" where they can select how many turns they have to progress before winning. The amount of squares or boxes that appear on the screen should also be adjustable by the user.
+There could also be a mode that goes on forever and even implements a leaderboard, so the user can see their personal records as well as the records of others. All of these improvements are things I would have done if I had a few more hours to work on this project.
 
 
 
 ## License
 
-    Copyright [YOUR NAME]
+    Copyright Peter Flis
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
