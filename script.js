@@ -11,7 +11,7 @@ var gamePlaying = false;
 var tonePlaying = false;
 var volume = 0.5;  //must be between 0.0 and 1.0
 var guessCounter = 0;
-var clueHoldTime = 100;
+var clueHoldTime = 1000;
 
 
 function startGame(){
@@ -71,7 +71,7 @@ function playSingleClue(btn){
 function playClueSequence(){
   guessCounter = 0;
   let delay = nextClueWaitTime; //set delay to initial wait time
-  //clueHoldTime-=100
+  clueHoldTime-=100
   for(let i=0;i<=progress;i++){ // for each clue that is revealed so far
     console.log("play single clue: " + pattern[i] + " in " + delay + "ms")
     setTimeout(playSingleClue,delay,pattern[i]) // set a timeout to play that clue
@@ -108,10 +108,13 @@ if(pattern[guessCounter] == btn){
       guessCounter++;
     }
   }else{
-    if(mistakes < 3)
+    if(mistakes < 2)
       {
         mistakes++;
-        alert("You have made " + mistakes + "mistakes");
+        if(mistakes==1)
+        alert("You have made " + mistakes + " mistake");
+        else
+        alert("You have made " + mistakes + " mistakes");
       }
     else
       {
