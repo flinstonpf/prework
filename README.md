@@ -39,7 +39,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-![Project](mygif.gf)
+![Project](https://github.com/flinstonpf/prework/blob/main/mygif.gif)
 
 
 ## Reflection Questions
