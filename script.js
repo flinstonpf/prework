@@ -1,15 +1,16 @@
 //Constants
-const clueHoldTime = 1000;
+
 const cluePauseTime = 333; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
 
 //Global Variables
-var pattern = [2, 2, 4, 3, 2, 1, 2, 4];
+var pattern = Array.apply(null)
 var progress = 0; 
 var gamePlaying = false;
 var tonePlaying = false;
 var volume = 0.5;  //must be between 0.0 and 1.0
 var guessCounter = 0;
+var clueHoldTime = 100;
 
 
 function startGame(){
@@ -28,9 +29,10 @@ function stopGame(){
 // Sound Synthesis Functions
 const freqMap = {
   1: 100,
-  2: 428.6,
-  3: 545,
-  4: 623
+  2: 250,
+  3: 375,
+  4: 450,
+  5: 560
 }
 function playTone(btn,len){ 
   o.frequency.value = freqMap[btn]
@@ -67,6 +69,7 @@ function playSingleClue(btn){
 function playClueSequence(){
   guessCounter = 0;
   let delay = nextClueWaitTime; //set delay to initial wait time
+  //clueHoldTime-=100
   for(let i=0;i<=progress;i++){ // for each clue that is revealed so far
     console.log("play single clue: " + pattern[i] + " in " + delay + "ms")
     setTimeout(playSingleClue,delay,pattern[i]) // set a timeout to play that clue
