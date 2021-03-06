@@ -27,10 +27,10 @@ function stopGame(){
 }
 // Sound Synthesis Functions
 const freqMap = {
-  1: 261.6,
-  2: 329.6,
-  3: 392,
-  4: 466.2
+  1: 100,
+  2: 428.6,
+  3: 545,
+  4: 623
 }
 function playTone(btn,len){ 
   o.frequency.value = freqMap[btn]
@@ -87,8 +87,26 @@ function guess(btn){
   if(!gamePlaying){
     return;
   }
-
-  // add game logic here
+if(pattern[guessCounter] == btn){
+    //Guess was correct!
+    if(guessCounter == progress){
+      if(progress == pattern.length - 1){
+        //GAME OVER: WIN!
+        winGame();
+      }else{
+        //Pattern correct. Add next segment
+        progress++;
+        playClueSequence();
+      }
+    }else{
+      //so far so good... check the next guess
+      guessCounter++;
+    }
+  }else{
+    //Guess was incorrect
+    //GAME OVER: LOSE!
+    loseGame();
+  }
 }
 
 //Page Initialization

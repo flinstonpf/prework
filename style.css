@@ -14,8 +14,7 @@ h1 {
 }
 button
 {
-  padding: 10px;
-  border-radius: 10px;
+  border-radius: 60%;
 }
 #gameButtonArea > button {
   width:200px;
