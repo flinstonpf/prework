@@ -39,7 +39,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-![Project](https://imgur.com/49BQbjn)
+![Project](mygif.gf)
 
 
 ## Reflection Questions
