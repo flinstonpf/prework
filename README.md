@@ -49,10 +49,13 @@ I used https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
 The biggest challenge that I encountered during the creation of this submission was with the randomized array of choices being generated. Coming from a python background I am used to using things such as List comprehensions in order to generate such things. 
 I could have done something like array = [random.randint(1,5) for i in range(9)] to accomplish this task. However, since we are using javascript for this project I had to learn how to use javascript's version of random. It was really fortunate that javascript and java share the same random function, so it was rather straightforward to implement after I realized that.
-
+The way I arrived at my solution was through a variety of google searches and I used python as a root for my searching. First I googled if Javascript supports list comprehension and found that unfortunately it does not. As a result, I ended up using a rather simple solution to randomize the values in the array by simply using a for loop and redefining all the values using Math.random.
+Overall, it is a problem that I run into alot and it was a simple issue of syntax versus a conceptual issue with my program which made it rather straightforward to resolve.
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
-[YOUR ANSWER HERE]
+My question about web development is how to write effective and maintainable code. Even in a simple program like this one it can easily become convoluted if we keep adding more classes to our program.
+I also look forward to backend development part of web development. I know that databases are a critical component and I have worked with those before, but I have yet to work with any Backend APIs or anything complicated to which I am looking forward to.
+
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
 [YOUR ANSWER HERE]
